@@ -1,0 +1,10 @@
+<div class="index-container col-xs-12 col-sm-6 col-sm-offset-3">
+<h1 class= "text-center">Restaurants</h1>
+<% @restaurants.each do |restaurant| %>
+<div class="restaurant">
+  <h2> <%= restaurant.name %> </h2> <%= link_to "See details", restaurant_path(restaurant), class: "btn btn-primary"%>
+</div>
+<% end %>
+
+<%= link_to "new restaurant", new_restaurant_path %>
+</div>
